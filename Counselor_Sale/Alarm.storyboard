@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pRa-E3-TAR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--알림-->
+        <scene sceneID="I3u-4c-Nxw">
+            <objects>
+                <viewController id="98O-rg-Njm" customClass="AlarmViewController" customModule="Counselor_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3vE-YU-ovp"/>
+                        <viewControllerLayoutGuide type="bottom" id="iwW-Rg-dlY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ja-Ny-c3D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qXT-my-WRY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="SKY-Un-sVI"/>
+                                    <constraint firstAttribute="width" constant="375" id="aEd-e8-4Rk"/>
+                                </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="KQQ-dl-v2X" customClass="AlarmTableViewCell" customModule="Counselor_Sale" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KQQ-dl-v2X" id="isg-W8-BUQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDM-rx-d3t">
+                                                    <rect key="frame" x="73" y="15" width="261" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017-03-03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi8-D2-SW1">
+                                                    <rect key="frame" x="73" y="40" width="261" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alarm" translatesAutoresizingMaskIntoConstraints="NO" id="mWP-Hr-Qf2">
+                                                    <rect key="frame" x="20" y="15" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView_AlarmIcon" destination="mWP-Hr-Qf2" id="GFM-DM-jpl"/>
+                                            <outlet property="label_AlarmComment" destination="lDM-rx-d3t" id="7ie-hG-nOL"/>
+                                            <outlet property="label_AlarmDate" destination="Hi8-D2-SW1" id="Tkv-wI-IdJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="98O-rg-Njm" id="zuE-8a-pDD"/>
+                                    <outlet property="delegate" destination="98O-rg-Njm" id="Cga-WS-bCn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qXT-my-WRY" firstAttribute="leading" secondItem="9ja-Ny-c3D" secondAttribute="leading" id="MXL-mW-wLk"/>
+                            <constraint firstItem="qXT-my-WRY" firstAttribute="top" secondItem="9ja-Ny-c3D" secondAttribute="top" id="QRU-B1-Afg"/>
+                            <constraint firstAttribute="trailing" secondItem="qXT-my-WRY" secondAttribute="trailing" id="Vbf-5F-5iU"/>
+                            <constraint firstAttribute="bottom" secondItem="qXT-my-WRY" secondAttribute="bottom" id="vZY-om-Vf5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="알림" id="vpf-c1-l2X">
+                        <barButtonItem key="leftBarButtonItem" image="24-24_my" id="ZhZ-k5-UbD">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                            <connections>
+                                <action selector="userSettingBtnTapped:" destination="98O-rg-Njm" id="HFl-0e-anb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="24-24_help" id="sZL-96-40A">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqA-fd-bYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6792.8000000000002" y="2014.5427286356824"/>
+        </scene>
+        <!--Alarm Web View Controller-->
+        <scene sceneID="J1j-Ny-YxY">
+            <objects>
+                <viewController id="1Rb-B4-0CY" customClass="AlarmWebViewController" customModule="Counselor_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XTD-d5-nhI"/>
+                        <viewControllerLayoutGuide type="bottom" id="pCg-8j-j3L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kjv-lJ-lDL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcq-aT-Xgw">
+                                <rect key="frame" x="20" y="216" width="335" height="451"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-JU-kw9">
+                                <rect key="frame" x="20" y="130" width="335" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="UYp-wq-L9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIx-G3-Ubn">
+                                <rect key="frame" x="20" y="187" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ds7-Nn-T6g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-hm-C4l">
+                                <rect key="frame" x="170" y="87" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="KAt-QX-LAX"/>
+                                    <constraint firstAttribute="width" constant="35" id="nAS-Z7-xlo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dcq-aT-Xgw" firstAttribute="bottom" secondItem="pCg-8j-j3L" secondAttribute="top" id="2mf-Pi-SdM"/>
+                            <constraint firstItem="MIx-G3-Ubn" firstAttribute="top" secondItem="uoO-JU-kw9" secondAttribute="bottom" constant="8" symbolic="YES" id="6dn-5P-VWa"/>
+                            <constraint firstItem="uoO-JU-kw9" firstAttribute="leading" secondItem="Kjv-lJ-lDL" secondAttribute="leadingMargin" constant="4" id="6h9-Nw-jFV"/>
+                            <constraint firstItem="uoO-JU-kw9" firstAttribute="trailing" secondItem="MIx-G3-Ubn" secondAttribute="trailing" id="Id6-oX-Vho"/>
+                            <constraint firstItem="uoO-JU-kw9" firstAttribute="leading" secondItem="MIx-G3-Ubn" secondAttribute="leading" id="Jnu-37-azo"/>
+                            <constraint firstItem="ZDH-hm-C4l" firstAttribute="top" secondItem="XTD-d5-nhI" secondAttribute="bottom" constant="67" id="Loj-Dy-eEh"/>
+                            <constraint firstItem="MIx-G3-Ubn" firstAttribute="leading" secondItem="Dcq-aT-Xgw" secondAttribute="leading" id="MlX-Cc-7cq"/>
+                            <constraint firstItem="ZDH-hm-C4l" firstAttribute="centerX" secondItem="uoO-JU-kw9" secondAttribute="centerX" id="QYK-zd-eMJ"/>
+                            <constraint firstItem="MIx-G3-Ubn" firstAttribute="trailing" secondItem="Dcq-aT-Xgw" secondAttribute="trailing" id="jyY-bu-Dq8"/>
+                            <constraint firstItem="uoO-JU-kw9" firstAttribute="top" secondItem="ZDH-hm-C4l" secondAttribute="bottom" constant="8" symbolic="YES" id="nMx-EF-xPM"/>
+                            <constraint firstItem="ZDH-hm-C4l" firstAttribute="centerX" secondItem="Kjv-lJ-lDL" secondAttribute="centerX" id="uuH-jA-LQJ"/>
+                            <constraint firstItem="Dcq-aT-Xgw" firstAttribute="top" secondItem="MIx-G3-Ubn" secondAttribute="bottom" constant="8" symbolic="YES" id="vXP-ah-VF5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alarmImageView" destination="ZDH-hm-C4l" id="drF-Fo-5qy"/>
+                        <outlet property="alarmListDate" destination="MIx-G3-Ubn" id="qvf-ED-DfE"/>
+                        <outlet property="alarmListTitle" destination="uoO-JU-kw9" id="y3I-jE-ZH6"/>
+                        <outlet property="alarmWebview" destination="Dcq-aT-Xgw" id="G0M-Ra-HY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DZ-af-wW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7612" y="2018.1409295352325"/>
+        </scene>
+        <!--알림-->
+        <scene sceneID="kzy-JK-nen">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pRa-E3-TAR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="알림" image="alarm" id="Ob5-GC-qE4"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gcq-P4-f6z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="98O-rg-Njm" kind="relationship" relationship="rootViewController" id="fY3-XB-ZZO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbr-CG-Ret" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5855.1999999999998" y="2014.5427286356824"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="24-24_help" width="16" height="16"/>
+        <image name="24-24_my" width="36" height="36"/>
+        <image name="alarm" width="16" height="16"/>
+    </resources>
+</document>

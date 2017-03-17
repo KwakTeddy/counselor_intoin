@@ -1,0 +1,6 @@
+framework module Pods_Counselor_SaleUITests {
+  umbrella header "Pods-Counselor_SaleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

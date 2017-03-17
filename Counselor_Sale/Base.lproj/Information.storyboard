@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MUM-ok-LhZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--현장정보-->
+        <scene sceneID="But-Fl-8Qo">
+            <objects>
+                <viewController id="cdg-3c-hPb" customClass="InformationViewController" customModule="Counselor_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tbf-hL-HSe"/>
+                        <viewControllerLayoutGuide type="bottom" id="UMG-2F-D1R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P56-UR-lG5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uai-Kn-AXb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="WZi-wo-JnK"/>
+                                    <constraint firstAttribute="width" constant="375" id="Z5h-As-dnk"/>
+                                </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="230" id="DP7-UD-RYd" customClass="InformationTableViewCell" customModule="Counselor_Sale" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DP7-UD-RYd" id="Yap-oZ-oeq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n6H-RP-bx5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="229" id="e3M-mP-vLc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이파크 한강망원지구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1v1-xC-hEc">
+                                                    <rect key="frame" x="29" y="139" width="317" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="gsh-0P-dee"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아파트 / 서울시 마포구 방울내로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj0-yH-yKH">
+                                                    <rect key="frame" x="29" y="181" width="317" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="Oi8-pu-tOd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Uj0-yH-yKH" firstAttribute="leading" secondItem="Yap-oZ-oeq" secondAttribute="leadingMargin" constant="21" id="1ty-ca-1zx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1v1-xC-hEc" secondAttribute="trailing" constant="21" id="3TR-uU-VYq"/>
+                                                <constraint firstItem="Uj0-yH-yKH" firstAttribute="top" secondItem="1v1-xC-hEc" secondAttribute="bottom" constant="8" id="4yl-5V-XsA"/>
+                                                <constraint firstItem="n6H-RP-bx5" firstAttribute="leading" secondItem="Yap-oZ-oeq" secondAttribute="leading" id="BTc-mM-PHz"/>
+                                                <constraint firstAttribute="bottom" secondItem="n6H-RP-bx5" secondAttribute="bottom" id="D1G-6O-Czf"/>
+                                                <constraint firstItem="n6H-RP-bx5" firstAttribute="top" secondItem="Yap-oZ-oeq" secondAttribute="top" id="MAi-be-2d0"/>
+                                                <constraint firstItem="1v1-xC-hEc" firstAttribute="leading" secondItem="Yap-oZ-oeq" secondAttribute="leadingMargin" constant="21" id="SVd-QW-OPb"/>
+                                                <constraint firstAttribute="trailing" secondItem="n6H-RP-bx5" secondAttribute="trailing" id="UfW-2y-yAW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Uj0-yH-yKH" secondAttribute="trailing" constant="21" id="d0g-Ze-3BD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Uj0-yH-yKH" secondAttribute="bottom" constant="6" id="nG1-D2-fuv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="informationAddress" destination="Uj0-yH-yKH" id="QE8-Lo-Olr"/>
+                                            <outlet property="informationImageView" destination="n6H-RP-bx5" id="lIZ-Jl-XhQ"/>
+                                            <outlet property="informationTitle" destination="1v1-xC-hEc" id="8aV-Ce-McX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cdg-3c-hPb" id="vib-HJ-vPF"/>
+                                    <outlet property="delegate" destination="cdg-3c-hPb" id="zP4-KA-vkj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Uai-Kn-AXb" secondAttribute="bottom" id="3hy-bc-Nwb"/>
+                            <constraint firstItem="Uai-Kn-AXb" firstAttribute="leading" secondItem="P56-UR-lG5" secondAttribute="leading" id="QB7-yN-qBH"/>
+                            <constraint firstAttribute="trailing" secondItem="Uai-Kn-AXb" secondAttribute="trailing" id="bW7-d7-qTM"/>
+                            <constraint firstItem="Uai-Kn-AXb" firstAttribute="top" secondItem="P56-UR-lG5" secondAttribute="top" id="zy6-bF-dAB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="현장정보" id="PKv-3J-XhK">
+                        <barButtonItem key="leftBarButtonItem" image="24-24_my" id="Efk-JY-kff">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                            <connections>
+                                <action selector="userSettingBtnTapped:" destination="cdg-3c-hPb" id="LkQ-hL-rrg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="24-24_help" id="LUA-vU-7JS">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                            <connections>
+                                <segue destination="geM-l2-2sb" kind="show" id="bNk-Hg-nfD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Uai-Kn-AXb" id="QRu-u6-431"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfU-B8-zYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4464.8000000000002" y="1736.5817091454273"/>
+        </scene>
+        <!--Information Detail View Controller-->
+        <scene sceneID="NrP-Iw-eH9">
+            <objects>
+                <viewController id="geM-l2-2sb" customClass="InformationDetailViewController" customModule="Counselor_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Upv-Sr-L5e"/>
+                        <viewControllerLayoutGuide type="bottom" id="h8o-Fl-Ohy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="CdO-xe-HDY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imQ-pA-TaO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="318"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="2Yw-5a-PDi"/>
+                                    <constraint firstAttribute="height" constant="318" id="SSM-9h-lV9"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-ch-XuA">
+                                <rect key="frame" x="168" y="981" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="Pyb-Tf-5op"/>
+                                    <constraint firstAttribute="height" constant="37" id="Zxk-L6-h0E"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="1" green="0.4313725531" blue="0.062745101750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="imQ-pA-TaO" secondAttribute="trailing" id="2xt-Qe-UOi"/>
+                            <constraint firstItem="imQ-pA-TaO" firstAttribute="leading" secondItem="CdO-xe-HDY" secondAttribute="leading" id="eDX-cp-Mh3"/>
+                            <constraint firstItem="imQ-pA-TaO" firstAttribute="top" secondItem="Upv-Sr-L5e" secondAttribute="bottom" id="ujB-bZ-fW0"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="pageControl" destination="pnA-ch-XuA" id="YhG-BE-eho"/>
+                        <outlet property="scrollView" destination="imQ-pA-TaO" id="Vbh-za-qki"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6r-lf-ZqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5242.3999999999996" y="1736.5817091454273"/>
+        </scene>
+        <!--현장정보-->
+        <scene sceneID="85l-al-bB1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MUM-ok-LhZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="현장정보" image="salesInfo" id="QyJ-ra-gOQ"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eGd-c8-heR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cdg-3c-hPb" kind="relationship" relationship="rootViewController" id="Gts-fA-ctl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB4-7Q-xUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3525.5999999999999" y="1736.5817091454273"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="24-24_help" width="16" height="16"/>
+        <image name="24-24_my" width="16" height="16"/>
+        <image name="salesInfo" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Odw-pX-eaN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--고객상담-->
+        <scene sceneID="eES-a8-QaW">
+            <objects>
+                <viewController id="7Nk-S2-vnD" customClass="ChatListViewController" customModule="Counselor_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yc7-bY-rOr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghW-jf-UwN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hei-Kl-ZoN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QDt-ff-6aH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="aiL-nW-NUy"/>
+                                    <constraint firstAttribute="height" constant="667" id="iFi-LV-Nj7"/>
+                                </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="db6-f0-XFc">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="db6-f0-XFc" id="vqg-yN-QbA">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RSM-7J-6nr">
+                                                    <rect key="frame" x="21" y="14" width="212" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="홍길동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iX-9H-4Og">
+                                                            <rect key="frame" x="0.0" y="0.0" width="212" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="아파트분양건으로 1:1 상단 원합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65z-vJ-ppZ">
+                                                            <rect key="frame" x="0.0" y="23" width="212" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="평택항 서희힐스테이트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yJ-mD-FqE">
+                                                            <rect key="frame" x="0.0" y="46" width="212" height="13.5"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Vb9-HJ-hDb">
+                                                    <rect key="frame" x="273" y="27" width="68" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="11 : 40" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDi-vm-SgM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="16"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2017-03-08" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wom-12-LMf">
+                                                            <rect key="frame" x="0.0" y="18" width="68" height="16"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Nk-S2-vnD" id="8tk-u5-CmP"/>
+                                    <outlet property="delegate" destination="7Nk-S2-vnD" id="zju-pv-u2z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QDt-ff-6aH" firstAttribute="top" secondItem="hei-Kl-ZoN" secondAttribute="top" id="5LW-Qt-Amo"/>
+                            <constraint firstAttribute="trailing" secondItem="QDt-ff-6aH" secondAttribute="trailing" id="O53-lI-9wi"/>
+                            <constraint firstItem="QDt-ff-6aH" firstAttribute="leading" secondItem="hei-Kl-ZoN" secondAttribute="leading" id="i8z-RC-lZF"/>
+                            <constraint firstAttribute="bottom" secondItem="QDt-ff-6aH" secondAttribute="bottom" id="z7K-fs-Bat"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="고객상담" id="0SD-Dg-8sk">
+                        <barButtonItem key="leftBarButtonItem" image="24-24_my" id="mBP-dN-qhx">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="24-24_help" id="xh3-pp-6bh">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="GJz-8A-gCK">
+                                <connections>
+                                    <segue destination="mmf-Kv-IL6" kind="show" id="baN-sk-xZC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8c-z4-kyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6794.3999999999996" y="1260.7196401799101"/>
+        </scene>
+        <!--홍길동님과의 상담-->
+        <scene sceneID="rcC-06-hEy">
+            <objects>
+                <viewController id="mmf-Kv-IL6" customClass="ChatDetailViewController" customModule="Counselor_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qnm-Rd-3Y7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iru-4u-ixL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jaE-Ix-Xml">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="홍길동님과의 상담" id="Isn-lm-zNW">
+                        <barButtonItem key="rightBarButtonItem" image="ic_settings" id="YyC-fi-5VK"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tQ-pd-Ogz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7522" y="1256"/>
+        </scene>
+        <!--고객상담-->
+        <scene sceneID="d8H-pD-8rf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Odw-pX-eaN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="고객상담" image="chatCustomer" id="Ffj-XR-FtB"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CR9-Yi-bKG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Nk-S2-vnD" kind="relationship" relationship="rootViewController" id="t84-Yt-IAW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNm-6F-gJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5855.1999999999998" y="1260.7196401799101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="24-24_help" width="16" height="16"/>
+        <image name="24-24_my" width="36" height="36"/>
+        <image name="chatCustomer" width="16" height="16"/>
+        <image name="ic_settings" width="24" height="24"/>
+    </resources>
+</document>
