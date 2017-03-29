@@ -29,6 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: tabbarFont, NSForegroundColorAttributeName: unselectedColor], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: tabbarFont, NSForegroundColorAttributeName: selectedColor], for: .selected)
         
+        
+        let userDefault = UserDefaults.standard
+        
+        if userDefault.object(forKey: "msg") != nil {
+            let story = UIStoryboard(name: "Main", bundle: nil)
+            let tab = story.instantiateViewController(withIdentifier: "mainTabbar")
+            window?.rootViewController = tab
+        }
+        
         return true
     }
 

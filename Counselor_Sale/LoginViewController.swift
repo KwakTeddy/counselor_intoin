@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SVProgressHUD
+import PasswordTextField
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
-
     @IBOutlet weak var loginBtn: LineButton!
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +30,7 @@ class LoginViewController: UIViewController {
     }
     
     func handleTextField() {
-        emailTxtField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        emailTxtField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
     func textFieldDidChange() {
@@ -51,11 +52,37 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtn_Tapped(_ sender: Any) {
         view.endEditing(true)
         
+        guard let email = emailTxtField.text, !email.isEmpty else { return }
+        guard let password = passwordTxtField.text, !password.isEmpty else { return }
         
+        let urlString = "http://md.intoin.io/cs/auth"
+        let authApiURL = URL(string: urlString)
+        let parameters = [ "user_id": email, "password": password ]
+        
+        Alamofire.request(authApiURL!, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                
+                switch response.result {
+                    
+                case .failure(let error):
+                    print(error)
+                case .success(let value):
+                    
+                    let json = JSON(value)
+                    if let msg = json["msg"].string {
+                        UserDefaults.standard.set(msg, forKey: "msg")
+                        UserDefaults.standard.synchronize()
+                    }
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let naviVC = storyboard.instantiateViewController(withIdentifier: "mainTabbar") as! UITabBarController
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = naviVC
+
+                }
+        }
     }
-    
-    
-    
 
 }
 

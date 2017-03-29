@@ -49,11 +49,11 @@ PODS:
   - JSQMessagesViewController (7.3.4):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - PasswordTextField (1.0.4)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
-  - SwiftForms (1.7)
   - SwiftyJSON (3.1.4)
   - TabPageViewController (0.2.1)
 
@@ -62,9 +62,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Messaging
   - JSQMessagesViewController
+  - PasswordTextField
   - SDWebImage
   - SVProgressHUD
-  - SwiftForms
   - SwiftyJSON
   - TabPageViewController
 
@@ -82,12 +82,12 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  PasswordTextField: 1fccb24dd769cfc963f1f60cb9fece692ad40530
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  SwiftForms: 3f3dbaa79fe54eb1ccd0aca8d0cd1e38eb00537e
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TabPageViewController: a4b46480e21251000962abad071b538679dbc2ad
 
-PODFILE CHECKSUM: 27d7698122e22c22d8b9e7a324ab2c4d21918896
+PODFILE CHECKSUM: bd03b9ccb0a30577ab73095c2ee5c80ed05783b5
 
 COCOAPODS: 1.1.1

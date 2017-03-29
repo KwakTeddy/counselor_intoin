@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E189a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bHv-e7-qfA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bHv-e7-qfA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -254,7 +254,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="V56-C2-CCr">
             <objects>
-                <tabBarController id="7Wg-TT-jl4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabbar" id="7Wg-TT-jl4" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="qby-Kg-RhG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -288,7 +288,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWR-fk-VU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1418" y="22"/>
+            <point key="canvasLocation" x="-535" y="197"/>
         </scene>
         <!--Customer-->
         <scene sceneID="SKj-WS-M5f">
@@ -385,7 +385,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="55B-bR-UOx" id="Y1X-K8-CFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -393,7 +393,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NcN-Qx-oIt" id="GcW-ov-A4J">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -401,7 +401,7 @@
                                         <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3O4-OZ-cAV" id="kBp-Up-7Au">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -530,11 +530,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfv-6b-zaG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1398" y="597"/>
+            <point key="canvasLocation" x="1398" y="684"/>
         </scene>
     </scenes>
     <resources>
-        <image name="14-23" width="42" height="69"/>
+        <image name="14-23" width="21" height="34"/>
         <image name="193 193_01" width="579" height="579"/>
         <image name="193 193_02" width="579" height="579"/>
         <image name="25 25_01" width="37" height="37"/>

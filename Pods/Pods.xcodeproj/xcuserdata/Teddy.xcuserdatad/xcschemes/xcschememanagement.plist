@@ -29,6 +29,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PasswordTextField-PasswordTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PasswordTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Counselor_Sale.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,11 +64,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftForms.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,22 +77,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0617894DB27C8371F62E019334185798</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1A3C87F51C886281E4036BF35BC36A4E</key>
+		<key>0F166D2FFB79AB8AC5174979143C01D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>23A92C7AA9F02E7B56DB349DCC688D68</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>361BDAAC8388149B2054A52ECD53A925</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,12 +97,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7FF7D710F5489D1890599C269A1FF1BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A86919726D9FEA0656586EAEAE34BBCA</key>
+		<key>8C94E4B34B3742A46711F31B262DC90E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5777B32A55C9404803978E4C7290A32</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,17 +127,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>CC4641597EBC8A8534A70DF783FA1D4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D0581AF7BF4A6DA140D280B19ECC7BFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0A6C03A2DA33F1B619F664D3F3E62EE</key>
+		<key>D642C6D70AB168B7B570266CB9E1D762</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF7361ADAD86E8125A9130BDA60B72A4</key>
+		<key>D8A678E642261E4EEDF932DCDFB1E064</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -16,6 +16,7 @@ pod 'SDWebImage'
 
 pod 'SVProgressHUD'
 pod 'TabPageViewController'
+pod 'PasswordTextField'
 
 
   # Pods for Counselor_Sale
