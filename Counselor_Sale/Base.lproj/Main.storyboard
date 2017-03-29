@@ -320,10 +320,10 @@
             </objects>
             <point key="canvasLocation" x="3273" y="609"/>
         </scene>
-        <!--Alarm-->
+        <!--Notice-->
         <scene sceneID="uvE-wh-Jb8">
             <objects>
-                <viewControllerPlaceholder storyboardName="Alarm" id="ZfF-F7-2jd" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Notice" id="ZfF-F7-2jd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="6Sq-jQ-7Bd"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuF-fP-BKd" userLabel="First Responder" sceneMemberID="firstResponder"/>

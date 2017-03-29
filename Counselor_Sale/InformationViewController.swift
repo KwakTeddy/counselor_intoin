@@ -7,23 +7,51 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SVProgressHUD
 import TabPageViewController
 
 class InformationViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var modelHouseArray = [AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        getModelHouseList()
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    func getModelHouseList() {
+    
+        let urlString = "http://md.intoin.io/cs/\(UserDefaults.standard.object(forKey: "msg")!)/modelhouse/list"
+        let modelHouseListApiURL = URL(string: urlString)
+    
+        SVProgressHUD.show()
+        Alamofire.request(modelHouseListApiURL!, method: .post, parameters : nil, encoding: URLEncoding.default, headers: nil)
+            .validate(statusCode : 200..<300)
+            .responseJSON { response in
+                
+                let result = response.result
+                if let dict = result.value as? [[String: AnyObject]] {
+                    
+                    self.modelHouseArray = dict as [AnyObject]
+                    print(dict)
+                    OperationQueue.main.addOperation {
+                        self.tableView.reloadData()
+                        SVProgressHUD.dismiss()
+                    }
+                }
+                
+        }
     }
     
     @IBAction func userSettingBtnTapped(_ sender: Any) {
@@ -42,22 +70,29 @@ class InformationViewController: UIViewController {
 
     }
 
-
 }
 
 extension InformationViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return modelHouseArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! InformationTableViewCell
-
+        
+        let modelHouse = modelHouseArray[indexPath.row]
+        let title = modelHouse["MODELHOUSE_NAME"]
+        let address = modelHouse["SIGONGADDRESS1"]
+        if let image = modelHouse as? String {
+            if let data = NSData(contentsOf: (NSURL(string: image) as URL?)!){
+                cell.informationImageView.image = UIImage(data: data as Data)
+            }
+        }
+        cell.informationTitle.text = title as? String
+        cell.informationAddress.text = address as? String
+        
         return cell
     }
-    
-    
-    
 }
